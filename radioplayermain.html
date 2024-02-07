@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internetradio Player</title>
+    <link rel="icon" href="resources/icon_radio.svg"></head>
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.4.12/dist/cdn/beer.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.4.12/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.0/dist/cdn/material-dynamic-colors.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body class="dark">
+  <div class="titelleiste">
+  <header class="secondary-container">
+      <nav>
+      <button>
+          <span>Optionen</span>
+          <i>arrow_drop_down</i>
+          <menu>
+              <a>Item 1</a>
+              <a>Item 2</a>
+              <a>Item 3</a>
+          </menu>
+          </button>
+          <h5 class="max center-align">Internetradio Player</h5>
+        <button class="circle transparent">
+          <img class="responsive" src="resources/icon_radio.svg">
+        </button>
+      </nav>
+    </header>
+  </div>
+
+
+  <div class="radiokarten padding primary fixed center middle">
+      <article>
+          <div class="row">
+            <img class="circle large" src="https://www.ffn.de/typo3conf/ext/ffn_site/Resources/Public/Images/radio-ffn-logo.svg"><!----><!---->
+            <div class="max">
+              <h5>radio ffn</h5>
+              <p>Mehr Musik. Mehr Abwechslung. Mehr Niedersachsen.</p>
+            </div>
+          </div>
+          <nav class="no-space">
+            <button onclick="PlayFFN()" class="border left-round">
+              <img class="buttonsvg" id="playpause" src="resources/play.svg">
+            </button>
+            <button class="border no-round">
+              <img class="buttonsvg" src="resources/refresh.svg">
+            </button>
+            <button class="border right-round">
+              <img class="buttonsvg" src="resources/stop.svg">
+            </button>
+          </nav>
+        </article>
+        <article>
+          <div class="row">
+            <img class="circle large" src="https://static.wikia.nocookie.net/logopedia/images/2/23/NDR_2_Facebook_icon.png/revision/latest?cb=20210711141208"><!----><!---->
+            <div class="max">
+              <h5>NDR2</h5>
+              <p>NDR2 Niedersachsen</p>
+            </div>
+          </div>
+          <nav>
+            <button>Button</button>
+          </nav>
+        </article>
+  </div>
+
+  <div class="mediensteuerung padding primary fixed center bottom">
+    <footer>
+      <nav>
+        <button class="circle transparent">
+          <img class="buttonsvg"  src="resources/play.svg">
+        </button>
+        <button class="circle transparent">
+          <i>brush</i>
+        </button>
+        <button class="circle transparent">
+          <i>mic</i>
+        </button>
+        <button class="circle transparent">
+          <i>image</i>
+        </button>
+        <div class="max"></div>
+        <button class="square round extra">
+          <i>add</i>
+        </button>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

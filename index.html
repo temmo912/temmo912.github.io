@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internetradio Player</title>
+    <link rel="icon" href="resources/icon_radio.svg"></head>
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.4.12/dist/cdn/beer.min.css" rel="stylesheet" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.4.12/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.0/dist/cdn/material-dynamic-colors.min.js"></script>
+<body>
+    <header>
+      <nav>
+        <button class="circle transparent">
+          <i>menu</i>
+        </button>
+        <h5 class="max center-align">Title</h5>
+        <button class="circle transparent">
+          <img class="responsive" src="/favicon.png">
+        </button>
+      </nav>
+    </header>
+
+    <div class="FFN">
+        <p>Radio ffn</p>
+        <button onclick="PlayFFN()"><img src="resources/play.svg" alt="Play"></button>
+        <button onclick="PauseFFN()"><img src="resources/pause.svg" alt="Pause"></button>
+        <button onclick="StopFFN()"><img src="resources/stop.svg" alt="Stop"></button>
+        <button onclick="ReloadFFN()"><img src="resources/refresh.svg" alt="Reload"></button>
+    </div><br>
+    <div class="NDR2">
+        <p>NDR2</p>
+        <button onclick="PlayNDR2()"><img src="resources/play.svg" alt="Play"></button>
+        <button onclick="PauseNDR2()"><img src="resources/pause.svg" alt="Pause"></button>
+        <button onclick="StopNDR2()"><img src="resources/stop.svg" alt="Stop"></button>
+        <button onclick="ReloadNDR2()"><img src="resources/refresh.svg" alt="Reload"></button>
+    </div>
+</body>
+</html>
+
+<script src="script.js"></script>
