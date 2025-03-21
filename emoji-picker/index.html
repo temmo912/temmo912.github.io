@@ -18,25 +18,14 @@
 </head>
 <body>
 
-    <h2>Emoji auswählen:</h2>
-    <div id="emoji-preview">🔍</div> <!-- Vorschau -->
-    <div id="emoji-picker"></div> <!-- Picker Container -->
-    <p>Klicke auf ein Emoji, um es zu kopieren!</p>
 
-    <script src="https://cdn.jsdelivr.net/npm/emoji-mart/dist/emoji-mart.js"></script>
-    <script>
-        // Picker erstellen
-        const picker = new EmojiMart.Picker({
-            onEmojiSelect: emoji => {
-                navigator.clipboard.writeText(emoji.native) // Kopiert das Emoji
-                    .then(() => alert("Emoji kopiert: " + emoji.native)); // Hinweis
-                document.getElementById('emoji-preview').textContent = emoji.native; // Vorschau aktualisieren
-            }
-        });
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+<script>
+  const pickerOptions = { onEmojiSelect: console.log }
+  const picker = new EmojiMart.Picker(pickerOptions)
 
-        // Picker in die Seite einfügen
-        document.getElementById('emoji-picker').appendChild(picker);
-    </script>
+  document.body.appendChild(picker)
+</script>
 
 </body>
 </html>
