@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Selector mit Kopierfunktion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-mart/css/emoji-mart.css">
+    <style>
+        #emoji-preview {
+            font-size: 50px; /* Größe der Vorschau */
+            text-align: center;
+            margin: 20px 0;
+        }
+        #emoji-picker {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Emoji auswählen:</h2>
+    <div id="emoji-preview">🔍</div> <!-- Vorschau -->
+    <div id="emoji-picker"></div> <!-- Picker Container -->
+    <p>Klicke auf ein Emoji, um es zu kopieren!</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart/dist/emoji-mart.js"></script>
+    <script>
+        // Picker erstellen
+        const picker = new EmojiMart.Picker({
+            onEmojiSelect: emoji => {
+                navigator.clipboard.writeText(emoji.native) // Kopiert das Emoji
+                    .then(() => alert("Emoji kopiert: " + emoji.native)); // Hinweis
+                document.getElementById('emoji-preview').textContent = emoji.native; // Vorschau aktualisieren
+            }
+        });
+
+        // Picker in die Seite einfügen
+        document.getElementById('emoji-picker').appendChild(picker);
+    </script>
+
+</body>
+</html>
